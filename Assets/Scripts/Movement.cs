@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
-    private float _inputHorizontal;
     private readonly float _playerSpeed = 25F;
+    private float _inputHorizontal;
     private Rigidbody2D _rigidbody;
 
     // Start is called before the first frame update
@@ -15,8 +16,21 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        // Sair do game
+        if (Input.GetKey(KeyCode.Escape))
+            Application.Quit();
+
+        if (Input.GetKey(KeyCode.R))
+            Restart();
+        
         // Movimentação do player
         _inputHorizontal = Input.GetAxis("Horizontal");
         _rigidbody.AddForce(new Vector2(_inputHorizontal * _playerSpeed, 0));
+    }
+
+    // Reiniciar jogo
+    private void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
