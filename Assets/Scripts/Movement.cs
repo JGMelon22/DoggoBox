@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
-    private readonly float _playerSpeed = 25F;
+    private readonly float _playerSpeed = 35F;
     private float _inputHorizontal;
     private Rigidbody2D _rigidbody;
 
@@ -24,8 +24,12 @@ public class Movement : MonoBehaviour
             Restart();
         
         // Movimentação do player
-        _inputHorizontal = Input.GetAxis("Horizontal");
-        _rigidbody.AddForce(new Vector2(_inputHorizontal * _playerSpeed, 0));
+        _inputHorizontal = Input.GetAxisRaw("Horizontal");
+
+        if (_inputHorizontal != 0)
+        {
+            _rigidbody.AddForce(new Vector2(_inputHorizontal * _playerSpeed, 0));
+        }
     }
 
     // Reiniciar jogo

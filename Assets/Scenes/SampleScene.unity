@@ -669,7 +669,7 @@ GameObject:
   - component: {fileID: 1071999866}
   - component: {fileID: 1071999865}
   m_Layer: 0
-  m_Name: TreeLeft
+  m_Name: Tree( Left)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -827,7 +827,7 @@ GameObject:
   - component: {fileID: 2098312642}
   - component: {fileID: 2098312641}
   m_Layer: 0
-  m_Name: TreeRight
+  m_Name: Tree (Right)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
