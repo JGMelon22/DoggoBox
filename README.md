@@ -1,11 +1,11 @@
-# UnityDemo
+# DoggoBox
 O projeto a seguir trata-se de um simples jogo em 2D com o objetivo de pegar o máximo de caixas sem deixar cair no chão. 
 
 <img src="https://github.com/JGMelon22/AppUni/assets/73988556/8044b5c3-161e-4453-ab97-114fe340c083" width="70%"/> <span>&nbsp;</span>
 
 <h2>Como jogar?</h2>
 - Movimentação: <strong>A</strong> e <strong>D</strong> = esquerda e direita, respectivamente </br>
-- Sair: Tecle <strong>S</strong> </br>
+- Sair: Tecle <strong>esc</strong> </br>
 - Reiniciar: Tecle <strong>R</strong> </br>
 
 <h4>Assets</h4>
