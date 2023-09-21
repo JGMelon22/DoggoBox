@@ -1,4 +1,4 @@
-using System;
+using UnityEditor;
 using UnityEngine;
 using Random = System.Random;
 
@@ -15,6 +15,7 @@ public class ObjectBehaviour : MonoBehaviour
     }
     
     // Obtem o presente ou se cair no chão, game over
+    [MenuItem("Custom Menu/Play")]
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !_isGameOver)
@@ -26,6 +27,7 @@ public class ObjectBehaviour : MonoBehaviour
         else if (collision.gameObject.CompareTag("Ground"))
         {
             _isGameOver = true;
+            EditorUtility.DisplayDialog("Alerta", "Game over! Tecle \"Esc\" para sair ou \"R\" para recomeçar", "Ok");
             Debug.Log("GAME OVER!");
         }
     }
