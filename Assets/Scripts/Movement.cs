@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private ObjectBehaviour _objectBehaviour;
+    [SerializeField] private FirecrackerBehaviour _firecrackerBehaviour;
     [SerializeField] private Animator _animator;
     private readonly float _playerSpeed = 35F;
     private bool _facingRight = true;
@@ -15,6 +16,7 @@ public class Movement : MonoBehaviour
     {
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
         _objectBehaviour.SpawnObject(); // Spwawna o presente ao inicial o jogo
+        _firecrackerBehaviour.SpawnFirecracker();
     }
 
     // Update is called once per frame
@@ -24,8 +26,15 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape))
             Application.Quit();
 
+        // Gerenciar game 
         if (Input.GetKey(KeyCode.R))
             Restart();
+
+        if (Input.GetKey(KeyCode.P))
+            Pause();
+
+        if (Input.GetKey(KeyCode.U))
+            Resume();
 
         // Movimentação do player
         _inputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -63,5 +72,16 @@ public class Movement : MonoBehaviour
     private void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    // Pause Game and unpause game
+    private void Pause()
+    {
+        Time.timeScale = 0;
+    }
+
+    private void Resume()
+    {
+        Time.timeScale = 1;
     }
 }

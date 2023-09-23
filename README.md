@@ -10,6 +10,8 @@ O projeto a seguir trata-se de um simples jogo em 2D com o objetivo de pegar o m
 - Movimentação: <strong>A</strong> e <strong>D</strong> = esquerda e direita, respectivamente </br>
 - Sair: Tecle <strong>esc</strong> </br>
 - Reiniciar: Tecle <strong>R</strong> </br>
+- Pausar: Tecle <strong>P</strong> </br>
+- Reseume: Tecle <strong>U</strong> </br>
 
 <h4>Assets</h4>
 <ul>

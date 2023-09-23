@@ -364,6 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectBehaviour: {fileID: 4639401093041385777, guid: 837840cf03603933c817971ec098d7be, type: 3}
+  _firecrackerBehaviour: {fileID: 6693479968037761816, guid: e3cb17b90f9521cd7907168897546cf7, type: 3}
   _animator: {fileID: 227854188}
 --- !u!95 &227854188
 Animator:

@@ -3,30 +3,29 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = System.Random;
 
-public class ObjectBehaviour : MonoBehaviour
+public class FirecrackerBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
     private bool _isGameOver;
 
-    // Obtem o presente ou se cair no chão, game over
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && !_isGameOver)
+        if (collision.gameObject.CompareTag("Ground") && !_isGameOver)
         {
-            SpawnObject();
+            SpawnFirecracker();
             Destroy(gameObject);
         }
 
-        else if (collision.gameObject.CompareTag("Ground"))
+        else if (collision.gameObject.CompareTag("Player"))
         {
             _isGameOver = true;
+            Destroy(gameObject);
             EditorUtility.DisplayDialog("Alerta", "Game over! Tecle clique em \"Ok\" para resetar", "Ok");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
-    // Gera presente em um lugar aleatório 
-    public void SpawnObject()
+    public void SpawnFirecracker()
     {
         var random = new Random();
         Instantiate(prefab, new Vector3(random.Next(-10, 10), 3.9F, 0F), Quaternion.identity);
