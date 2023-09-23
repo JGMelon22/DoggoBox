@@ -30,7 +30,14 @@ public class Movement : MonoBehaviour
         _inputHorizontal = Input.GetAxisRaw("Horizontal");
 
         if (_inputHorizontal != 0) _rigidbody.AddForce(new Vector2(_inputHorizontal * _playerSpeed, 0));
-
+        
+        // Flip player
+        if (_inputHorizontal > 0)
+            gameObject.transform.localScale = new Vector3(0.27F, 0.27F, 1);
+        
+        else if (_inputHorizontal < 0)
+            gameObject.transform.localScale = new Vector3(-0.27F, 0.27F, 1);
+        
         // Animação do player
         _animator.SetFloat("Speed",
             Mathf.Abs(_inputHorizontal)); // Usamos Abs. devido ao eixo x na esquerda ser negativo
