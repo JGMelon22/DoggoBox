@@ -1,7 +1,7 @@
 # DoggoBox
-O projeto a seguir trata-se de um simples jogo em 2D com o objetivo de pegar o máximo de caixas sem deixar cair no chão. 
+O projeto a seguir trata-se de um simples jogo em 2D com o objetivo de pegar o máximo de caixas sem deixar cair no chão e desviar em misseis. 
 
-<img src="https://github.com/JGMelon22/AppUni/assets/73988556/8044b5c3-161e-4453-ab97-114fe340c083" width="70%"/> <span>&nbsp;</span>
+[<img width="600" height="300"/>](https://github.com/JGMelon22/AppUni/assets/73988556/938b2926-ee06-4840-8751-88204e97676f)
 
 <h2>Atenção ⚠️ - Unity Version</h2>
 <span>Para este projeto foi utilizado a versão 2022.3.9f1</span>
@@ -19,3 +19,4 @@ O projeto a seguir trata-se de um simples jogo em 2D com o objetivo de pegar o m
   <li><a href="https://assetstore.unity.com/packages/2d/environments/free-platform-game-assets-85838">Free Platform Game Assets</a></li>
   <li><a href="https://www.gameart2d.com/cat-and-dog-free-sprites.html">Doggo</a></li>
 </ul>
+
