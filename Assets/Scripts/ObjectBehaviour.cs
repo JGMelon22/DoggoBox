@@ -20,7 +20,7 @@ public class ObjectBehaviour : MonoBehaviour
         else if (collision.gameObject.CompareTag("Ground"))
         {
             _isGameOver = true;
-            EditorUtility.DisplayDialog("Alerta", "Game over! Tecle clique em \"Ok\" para resetar", "Ok");
+            EditorUtility.DisplayDialog("Alerta", "Game over! Clique em \"Ok\" para resetar", "Ok");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

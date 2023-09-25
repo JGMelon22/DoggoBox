@@ -20,7 +20,7 @@ public class FirecrackerBehaviour : MonoBehaviour
         {
             _isGameOver = true;
             Destroy(gameObject);
-            EditorUtility.DisplayDialog("Alerta", "Game over! Tecle clique em \"Ok\" para resetar", "Ok");
+            EditorUtility.DisplayDialog("Alerta", "Game over! Clique em \"Ok\" para resetar", "Ok");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
