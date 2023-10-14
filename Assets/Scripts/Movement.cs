@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private ObjectBehaviour _objectBehaviour;
-    [SerializeField] private FirecrackerBehaviour _firecrackerBehaviour;
-    [SerializeField] private Animator _animator;
+    [SerializeField] private ObjectBehaviour objectBehaviour;
+    [SerializeField] private FirecrackerBehaviour firecrackerBehaviour;
+    [SerializeField] private Animator animator;
     private readonly float _playerSpeed = 35F;
     private bool _facingRight = true;
     private float _inputHorizontal;
@@ -15,8 +15,8 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
-        _objectBehaviour.SpawnObject(); // Spwawna o presente ao inicial o jogo
-        _firecrackerBehaviour.SpawnFirecracker();
+        objectBehaviour.SpawnObject(); // Spwawna o presente ao inicial o jogo
+        firecrackerBehaviour.SpawnFirecracker();
     }
 
     // Update is called once per frame
@@ -51,7 +51,7 @@ public class Movement : MonoBehaviour
             Flip();
 
         // Animação do player
-        _animator.SetFloat("Speed",
+        animator.SetFloat("Speed",
             Mathf.Abs(_inputHorizontal)); // Usamos Abs. devido ao eixo x na esquerda ser negativo
     }
 
