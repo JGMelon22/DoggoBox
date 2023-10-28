@@ -24,7 +24,7 @@ public class FirecrackerBehaviour : MonoBehaviour
 
             Helper.Pause();
 
-            ShowConfirmDialog();
+            ShowSimpleDialog();
         }
     }
 
@@ -33,17 +33,13 @@ public class FirecrackerBehaviour : MonoBehaviour
         var random = new Random();
         Instantiate(prefab, new Vector3(random.Next(-10, 10), 3.9F, 0F), Quaternion.identity);
     }
-
-// Menu simples de alerta 
-    private void ShowConfirmDialog()
+    
+    // Dialog box simples 
+    private void ShowSimpleDialog()
     {
         uDialog.NewDialog()
-            .SetColorScheme("Orange Red")
-            .SetThemeImageSet(eThemeImageSet.SciFi)
-            .SetIcon(eIconType.Warning)
-            .SetTitleText("Alerta")
-            .SetShowTitleCloseButton(false)
-            .SetContentText($"<b>Game Over:</b> Você perdeu todos os presentes :(")
+            .SetTitleText("<b>Game Over</b>")
+            .SetContentText($"Você perdeu todos os presentes :(")
             .SetDimensions(400, 200)
             .AddButton("Tentar novamente", () =>
             {
