@@ -1,3 +1,4 @@
+using UI.Dialogs;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -20,9 +21,10 @@ public class FirecrackerBehaviour : MonoBehaviour
         {
             _isGameOver = true;
             Destroy(gameObject);
-            EditorUtility.DisplayDialog("Alerta",
-                "Game over! Você perdeu todos os presentes :(\nClique em \"Ok\" para resetar", "Ok");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            Helper.Pause();
+
+            ShowConfirmDialog();
         }
     }
 
@@ -30,5 +32,25 @@ public class FirecrackerBehaviour : MonoBehaviour
     {
         var random = new Random();
         Instantiate(prefab, new Vector3(random.Next(-10, 10), 3.9F, 0F), Quaternion.identity);
+    }
+
+// Menu simples de alerta 
+    private void ShowConfirmDialog()
+    {
+        uDialog.NewDialog()
+            .SetColorScheme("Orange Red")
+            .SetThemeImageSet(eThemeImageSet.SciFi)
+            .SetIcon(eIconType.Warning)
+            .SetTitleText("Alerta")
+            .SetShowTitleCloseButton(false)
+            .SetContentText($"<b>Game Over:</b> Você perdeu todos os presentes :(")
+            .SetContentText($"")
+            .SetDimensions(400, 200)
+            .AddButton("Tentar novamente", () =>
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Helper.Resume();
+            })
+            .SetCloseWhenAnyButtonClicked();
     }
 }

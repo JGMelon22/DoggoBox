@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -28,13 +27,13 @@ public class Movement : MonoBehaviour
 
         // Gerenciar game 
         if (Input.GetKey(KeyCode.R))
-            Restart();
+            Helper.Restart();
 
         if (Input.GetKey(KeyCode.P))
-            Pause();
+            Helper.Pause();
 
         if (Input.GetKey(KeyCode.U))
-            Resume();
+            Helper.Resume();
 
         // Movimentação do player
         _inputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -66,22 +65,5 @@ public class Movement : MonoBehaviour
         gameObject.transform.localScale = currentScale;
 
         _facingRight = !_facingRight;
-    }
-
-    // Reiniciar jogo
-    private void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    // Pause Game and unpause game
-    private void Pause()
-    {
-        Time.timeScale = 0;
-    }
-
-    private void Resume()
-    {
-        Time.timeScale = 1;
     }
 }

@@ -1,4 +1,4 @@
-using UnityEditor;
+using UI.Dialogs;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = System.Random;
@@ -22,9 +22,11 @@ public class ObjectBehaviour : MonoBehaviour
         else if (collision.gameObject.CompareTag("Ground"))
         {
             _isGameOver = true;
-            EditorUtility.DisplayDialog("Alerta",
-                $"Game over! Pontuação final: {finalScore}\nClique em \"Ok\" para resetar", "Ok");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            Helper.Pause();
+
+            ShowConfirmDialog();
+
             finalScore = 0; // Reseta a pontuação em caso de restart
         }
     }
@@ -34,5 +36,25 @@ public class ObjectBehaviour : MonoBehaviour
     {
         var random = new Random();
         Instantiate(prefab, new Vector3(random.Next(-10, 10), 3.9F, 0F), Quaternion.identity);
+    }
+    
+    // Menu simples de alerta 
+    private void ShowConfirmDialog()
+    {
+        uDialog.NewDialog()
+            .SetColorScheme("Orange Red")
+            .SetThemeImageSet(eThemeImageSet.SciFi)
+            .SetIcon(eIconType.Warning)
+            .SetTitleText("Alerta")
+            .SetShowTitleCloseButton(false)
+            .SetContentText($"<b>Game Over:</b> Pontuação final: {finalScore}")
+            .SetContentText($"")
+            .SetDimensions(400, 200)
+            .AddButton("Tentar novamente", () =>
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Helper.Resume();
+            })
+            .SetCloseWhenAnyButtonClicked();
     }
 }
