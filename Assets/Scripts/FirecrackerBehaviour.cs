@@ -44,7 +44,6 @@ public class FirecrackerBehaviour : MonoBehaviour
             .SetTitleText("Alerta")
             .SetShowTitleCloseButton(false)
             .SetContentText($"<b>Game Over:</b> Você perdeu todos os presentes :(")
-            .SetContentText($"")
             .SetDimensions(400, 200)
             .AddButton("Tentar novamente", () =>
             {

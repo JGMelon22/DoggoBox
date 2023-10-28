@@ -48,7 +48,6 @@ public class ObjectBehaviour : MonoBehaviour
             .SetTitleText("Alerta")
             .SetShowTitleCloseButton(false)
             .SetContentText($"<b>Game Over:</b> Pontuação final: {finalScore}")
-            .SetContentText($"")
             .SetDimensions(400, 200)
             .AddButton("Tentar novamente", () =>
             {
