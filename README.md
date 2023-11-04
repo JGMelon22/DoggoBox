@@ -1,4 +1,4 @@
-# DoggoBox
+# Christmas Doggo Gifts
 O projeto a seguir trata-se de um simples jogo em 2D com o objetivo de pegar o máximo de caixas sem deixar cair no chão e desviar em misseis. 
 
 [<img width="600" height="300"/>](https://github.com/JGMelon22/DoggoBox/assets/73988556/5386b396-b468-4e06-964d-5777b0eb7860)
