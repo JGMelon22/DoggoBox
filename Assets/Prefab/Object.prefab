@@ -61,7 +61,7 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 0.75
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 5758475435505095666}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8123, y: 1, z: 0}
+  m_LocalPosition: {x: -6.849251, y: 3.0053377, z: 0}
   m_LocalScale: {x: 0.14972928, y: 0.12848565, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
