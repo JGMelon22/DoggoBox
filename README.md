@@ -1,7 +1,7 @@
 # DoggoBox
 O projeto a seguir trata-se de um simples jogo em 2D com o objetivo de pegar o máximo de caixas sem deixar cair no chão e desviar em misseis. 
 
-[<img width="600" height="300"/>](https://github.com/JGMelon22/DoggoBox/assets/73988556/36295d7e-260c-4252-bad4-f4cc499ce721)
+[<img width="600" height="300"/>](https://github.com/JGMelon22/DoggoBox/assets/73988556/5386b396-b468-4e06-964d-5777b0eb7860)
 
 <h2>Atenção ⚠️ - Unity Version</h2>
 <span>Para este projeto foi utilizado a versão 2022.3.9f1</span>
