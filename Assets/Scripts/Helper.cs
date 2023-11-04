@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Helper : MonoBehaviour
+public sealed class Helper : MonoBehaviour
 {
     public static void Restart()
     {
