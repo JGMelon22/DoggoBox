@@ -1,5 +1,5 @@
 # Christmas Doggo Gifts
-O projeto a seguir trata-se de um simples jogo em 2D com o objetivo de pegar o máximo de caixas sem deixar cair no chão e desviar em misseis. 
+O projeto a seguir trata-se de um simples jogo em 2D com o objetivo de pegar o máximo de caixas sem deixar cair no chão e desviar em mísseis. 
 
 [<img width="600" height="300"/>](https://github.com/JGMelon22/DoggoBox/assets/73988556/5386b396-b468-4e06-964d-5777b0eb7860)
 
@@ -11,7 +11,7 @@ O projeto a seguir trata-se de um simples jogo em 2D com o objetivo de pegar o m
 - Sair: Tecle <strong>esc</strong> </br>
 - Reiniciar: Tecle <strong>R</strong> </br>
 - Pausar: Tecle <strong>P</strong> </br>
-- Reseume: Tecle <strong>U</strong> </br>
+- Resume: Tecle <strong>U</strong> </br>
 
 <h4>Assets</h4>
 <ul>
